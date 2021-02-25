@@ -26,6 +26,9 @@ namespace Methods
             var result4 = Add6(out number3, number4);
             Console.WriteLine("Add5: {0}", result4);
             Console.WriteLine("number1: {0}", number3);
+            Console.WriteLine(multiply(2, 4));
+            Console.WriteLine(multiply(2, 4, 5));
+            Console.WriteLine(add7(1, 2, 3, 4, 5, 6));
             Console.ReadKey();
         }
 
@@ -67,6 +70,24 @@ namespace Methods
         {
             number1 = 30;
             return number1 + number2;
+        }
+
+        //method overloading
+        static int multiply(int number1, int number2)
+        {
+            return number1 * number2;
+        }
+
+        //method overloading
+        static int multiply(int number1, int number2, int number3)
+        {
+            return number1 * number2 * number3;
+        }
+
+        //params
+        static int add7(params int[] numbers)
+        {
+            return numbers.Sum();
         }
     }
 }
